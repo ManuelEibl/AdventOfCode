@@ -4,7 +4,7 @@ fun readLines(fileName: String): List<String> {
     return File(fileName).readLines()
 }
 
-fun apply_bitmask(bitmask: String, originalValue: Int): Long {
+fun applyBitmask(bitmask: String, originalValue: Int): Long {
     val originalBinaryString: String = Integer.toBinaryString(originalValue)
     var newBinaryString: String = ""
 
@@ -41,7 +41,7 @@ fun main() {
             if (bitMap.isBlank()) {
                 throw Exception("bitMap still blank!")
             }
-            val newValue: Long = apply_bitmask(bitMap, originalValue)
+            val newValue: Long = applyBitmask(bitMap, originalValue)
             memoryMap[indexValue] = newValue
 
         }
